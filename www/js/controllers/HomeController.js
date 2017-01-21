@@ -20,7 +20,7 @@
 
 
 		$scope.takePicture = function(){
-      alert('detection type: ' + me.detection_type);
+      //alert('detection type: ' + me.detection_type);
 
 			var options = {
 		  	destinationType: Camera.DestinationType.DATA_URL,
@@ -78,8 +78,8 @@
                 var res = JSON.parse(result.response);
                 var key = me.detection_types[me.detection_type] + 'Annotations';
 								me.image_description = res.responses[0][key][0].description;
-								alert(res.responses[0][key][0].description);
-								alert(JSON.stringify(result));
+								//alert(res.responses[0][key][0].description);
+								//alert(JSON.stringify(result));
 								//Translate
 							var sourceLang = 'en';
 							var targetLang = 'nl';
@@ -130,8 +130,6 @@
 // 		alert(json);
 // //	}
 // };
-
-
 					  }, 
 						
 						function(err){
@@ -145,9 +143,6 @@
 			}, function(err){
 			  alert('An error occured getting the picture from the camera');
 			});
-
-
-
 // 			function makeHttpObject() {
 //   try {return new XMLHttpRequest();}
 //   catch (error) {}
